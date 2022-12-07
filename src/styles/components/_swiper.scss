@@ -1,0 +1,54 @@
+.scrolling-wrap {
+    margin-top: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+.scrolling-wrap:hover .comm{
+    animation-play-state: paused;
+}
+.comm {
+    display: flex;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0;
+}
+.comm div {
+    margin: 0;
+}
+.comm div:before{
+    content:'•';
+    -webkit-text-stroke: 0px #000;
+    color: #aaa;
+    display: inline-block;
+    margin: 0 2rem;
+}
+.anim1{
+    animation: scroll 14s linear infinite;
+}
+.anim2{
+    animation: scroll-reverse 14s linear infinite;
+}
+
+@keyframes scroll {
+0%{
+    transform: translateX(0);
+}
+100%{
+    transform: translateX(-100%);
+}
+}
+
+@keyframes scroll-reverse {
+0%{
+    transform: translateX(-100%);
+}
+100%{
+    transform: translateX(0);
+}
+}
+.swiperContainer{
+    position: absolute;
+    left: 0;
+}
