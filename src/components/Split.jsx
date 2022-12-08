@@ -6,11 +6,21 @@ const Split = () => {
     const textUnder = useRef(null);
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            textTop.current.style.bottom = "1em";
-            textBottom.current.style.top = "1em";
-            setTimeout(() => {
-                textUnder.current.style.opacity = "1";
-            }, 500);
+            console.log(window.scrollY);
+            if (window.scrollY > 0) {
+                textTop.current.style.bottom = "1em";
+                textBottom.current.style.top = "1em";
+                setTimeout(() => {
+                    textUnder.current.style.opacity = "1";
+                }, 500);
+            }else{
+                textTop.current.style.bottom = ".5em";
+                textBottom.current.style.top = ".5em";
+                setTimeout(() => {
+                    textUnder.current.style.opacity = "0";
+                }, 500);
+            }
+
         });
     }, []);
     return ( 

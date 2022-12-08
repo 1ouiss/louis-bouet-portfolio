@@ -17,9 +17,6 @@ const Swiper = () => {
                             <div className="card-logo" key={card.id}>
                                 <img src={card.image}
                                     alt={card.text} />
-                                <p>
-                                    {card.text}
-                                </p>
                             </div>
                         ))
                     }
@@ -30,9 +27,6 @@ const Swiper = () => {
                             <div className="card-logo" key={card.id}>
                                 <img src={card.image}
                                     alt={card.text} />
-                                <p>
-                                    {card.text}
-                                </p>
                             </div>
                         ))
                     }
@@ -45,9 +39,6 @@ const Swiper = () => {
                             <div className="card-logo" key={card.id}>
                                 <img src={card.image}
                                     alt={card.text} />
-                                <p>
-                                    {card.text}
-                                </p>
                             </div>
                         ))
                     }
@@ -58,9 +49,6 @@ const Swiper = () => {
                             <div className="card-logo" key={card.id}>
                                 <img src={card.image}
                                     alt={card.text} />
-                                <p>
-                                    {card.text}
-                                </p>
                             </div>
                         ))
                     }
