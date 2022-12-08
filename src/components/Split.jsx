@@ -26,7 +26,7 @@ const Split = () => {
                 </span>
             </div>
             <div className="underText" ref={textUnder}>
-                Etudiant en bachelor développeur web, à la recherche d'un stage de 6 mois à partir de septembre 2021.
+                Developpeur Web
             </div>
         </div>
      );

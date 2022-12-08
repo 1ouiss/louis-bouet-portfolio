@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "text": "HTML",
+        "image": "./images/html-logo.png"
+    },
+    {
+        "id": 2,
+        "text": "CSS",
+        "image": "./images/css-logo.png"
+    },
+    {
+        "id": 3,
+        "text": "JAVASCRIPT",
+        "image": "./images/javascript-logo.png"
+    },
+    {
+        "id": 4,
+        "text": "SASS",
+        "image": "./images/sass-logo.png"
+    },
+    {
+        "id": 5,
+        "text": "PHP",
+        "image": "./images/php-logo.png"
+    },
+    {
+        "id": 6,
+        "text": "NODE JS",
+        "image": "./images/node-js-logo.png"
+    },
+    {
+        "id": 7,
+        "text": "MOnGoDB",
+        "image": "./images/mongodb-logo.png"
+    },
+    {
+        "id": 8,
+        "text": "REACT JS",
+        "image": "./images/react-logo.png"
+    },
+    {
+        "id": 9,
+        "text": "VUE JS",
+        "image": "./images/vue-js-logo.png"
+    }
+]

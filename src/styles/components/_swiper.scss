@@ -1,8 +1,8 @@
 .scrolling-wrap {
-    margin-top: 200px;
     overflow: hidden;
     white-space: nowrap;
     display: flex;
+    margin: 30px;
 }
 .scrolling-wrap:hover .comm{
     animation-play-state: paused;
@@ -51,4 +51,21 @@
 .swiperContainer{
     position: absolute;
     left: 0;
+    margin-top: 200px;
+}
+
+.card-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+    img{
+        height: 75px;
+        object-fit: cover;
+    }
+    p{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 8px;
+    }
 }

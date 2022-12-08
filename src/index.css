@@ -21,6 +21,8 @@ code {
 body {
   background: #282c34;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow-x: hidden;
 }
 
 .home{

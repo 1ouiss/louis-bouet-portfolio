@@ -7,7 +7,10 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Split/>
+            <div className="pres">
+                <img src="./images/memoji.png" alt="" />
+            </div>
+                <Split/>
             <Swiper/>
         </div>
      );

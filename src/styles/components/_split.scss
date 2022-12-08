@@ -10,12 +10,10 @@
 }
 
 .splitContainer { 
-  position: relative; 
-  margin: 5% auto 0 auto; 
-  font-size: 8em; 
-  text-align: center; 
+  position: relative;  
+  font-size: 7em; 
   height: 1em;
-  margin-top: 500px;
+  margin: 40px;
 }
 
 .splitText { 
@@ -58,6 +56,7 @@
   top: 15%;
   right:0;
   left: 0;
-  font-size: 12px;
+  font-size: .5em;
   color: #fff;
+  text-transform: uppercase;
 }

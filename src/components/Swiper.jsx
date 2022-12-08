@@ -1,44 +1,69 @@
+import { useState, useEffect } from "react";
+
 const Swiper = () => {
+    const [cards, setCards] = useState([]);
+
+    useEffect(() => {
+        fetch('./logo.json')
+            .then(res => res.json())
+            .then(data => setCards(data));
+    }, []);
     return ( 
         <div className="swiperContainer">
-            <div class="scrolling-wrap">
-                <div class="comm anim1">
-                    <div>Lorem ipsum</div>
-                    <div>dolor sit amet</div>
-                    <div>consectetur</div>
-                    <div>adipisicing elit</div>
-                    <div>Dignissimos</div>
-                    <div>qui laudantium commodi</div>
-                    <div>at ducimus</div>
+            <div className="scrolling-wrap">
+                <div className="comm anim1">  
+                    {
+                        cards.map((card) => (
+                            <div className="card-logo" key={card.id}>
+                                <img src={card.image}
+                                    alt={card.text} />
+                                <p>
+                                    {card.text}
+                                </p>
+                            </div>
+                        ))
+                    }
                 </div>
-                <div class="comm anim1">
-                    <div>Lorem ipsum</div>
-                    <div>dolor sit amet</div>
-                    <div>consectetur</div>
-                    <div>adipisicing elit</div>
-                    <div>Dignissimos</div>
-                    <div>qui laudantium commodi</div>
-                    <div>at ducimus</div>
+                <div className="comm anim1">
+                    {
+                        cards.map((card) => (
+                            <div className="card-logo" key={card.id}>
+                                <img src={card.image}
+                                    alt={card.text} />
+                                <p>
+                                    {card.text}
+                                </p>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
             <div className="scrolling-wrap">
                 <div className="comm anim2">
-                    <div>Lorem ipsum</div>
-                    <div>dolor sit amet</div>
-                    <div>consectetur</div>
-                    <div>adipisicing elit</div>
-                    <div>Dignissimos</div>
-                    <div>qui laudantium commodi</div>
-                    <div>at ducimus</div>
+                    {
+                        cards.map((card) => (
+                            <div className="card-logo" key={card.id}>
+                                <img src={card.image}
+                                    alt={card.text} />
+                                <p>
+                                    {card.text}
+                                </p>
+                            </div>
+                        ))
+                    }
                 </div>
                 <div className="comm anim2">
-                    <div>Lorem ipsum</div>
-                    <div>dolor sit amet</div>
-                    <div>consectetur</div>
-                    <div>adipisicing elit</div>
-                    <div>Dignissimos</div>
-                    <div>qui laudantium commodi</div>
-                    <div>at ducimus</div>
+                    {
+                        cards.map((card) => (
+                            <div className="card-logo" key={card.id}>
+                                <img src={card.image}
+                                    alt={card.text} />
+                                <p>
+                                    {card.text}
+                                </p>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
