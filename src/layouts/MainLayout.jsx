@@ -1,9 +1,7 @@
 import { Box, Container } from "@mui/material";
 import Nav from "../components/Nav";
-import { useRef, useState, useEffect} from "react";
+import { useRef, useEffect} from "react";
 import { gsap } from "gsap";
-
-
 
 const MainLayout = ({children}) => {
     const cursorOuter = useRef(null);
@@ -13,7 +11,6 @@ const MainLayout = ({children}) => {
         x: -100,
         y: -100,
     };
-
     
     useEffect(() => {
         // let SY = 0;
