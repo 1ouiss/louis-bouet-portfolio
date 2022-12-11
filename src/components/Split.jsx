@@ -4,9 +4,9 @@ const Split = () => {
     const textTop = useRef(null);
     const textBottom = useRef(null);
     const textUnder = useRef(null);
+    
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            console.log(window.scrollY);
             if (window.scrollY > 0) {
                 textTop.current.style.bottom = "1em";
                 textBottom.current.style.top = "1em";
@@ -20,12 +20,17 @@ const Split = () => {
                     textUnder.current.style.opacity = "0";
                 }, 500);
             }
-
         });
+        
     }, []);
+
+    const mouseEnter = () => {
+        console.log("mouseEnter");
+
+    }
     return ( 
         <div className="splitContainer">
-            <div className="splitText textTop" ref={textTop}>
+            <div className="splitText textTop" ref={textTop} onMouseEnter={mouseEnter}>
                 <span>
                 Louis Bouet
                 </span>

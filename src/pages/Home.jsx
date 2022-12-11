@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 import Split from "../components/Split";
 import Swiper from "../components/Swiper";
 

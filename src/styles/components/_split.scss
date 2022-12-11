@@ -3,6 +3,7 @@
   transition-property: top, bottom;
   transition-duration: 500ms, 500ms;
   transition-timing-function: ease-in-out, ease-in-out;
+  mix-blend-mode: exclusion;
 }
 
 .underText {
