@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Box } from '@mui/material';
 
 const Nav = () => {
 
@@ -20,25 +21,26 @@ const Nav = () => {
     }
 
     return ( 
-        <header>
-            <div className="header-inner">
+        <Box component="header">
+            <Box component="div" className="header-inner">
                 <h1>
                     Bouet <span>Louis</span>
                 </h1>
-                <div id="menu-toggle" className="menu-toggle cursor-hover-element" onClick={(e) => handleClick(e)} ref={menuToggle}>
-                    <div className="menu-toggle-inner magnet">
-                        <div id="line-1" className={isMenuOpen ? "line top-line active" : "line top-line"} ref={line1}></div>
-                        <div id="line-2" className={isMenuOpen ? "line bottom-line active" : "line bottom-line"} ref={line2}></div>
-                    </div>
-                </div>
-                <nav id="nav" ref={nav} className={isMenuOpen ? "active" : null}>
+                <Box id="menu-toggle" component="div" className="menu-toggle cursor-hover-element" onClick={(e) => handleClick(e)} ref={menuToggle}>
+                    <Box component="div" className="menu-toggle-inner magnet">
+                        <Box id="line-1" component="div" className={isMenuOpen ? "line top-line active" : "line top-line"} ref={line1}></Box>
+                        <Box id="line-2" component="div" className={isMenuOpen ? "line bottom-line active" : "line bottom-line"} ref={line2}></Box>
+                    </Box>
+                </Box>
+                <Box component="nav" id="nav" ref={nav} className={isMenuOpen ? "active" : null}>
                     <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
                     <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
+                    <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
                     <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-                </nav>
-                <div id="slide" className={isMenuOpen ? "slide active" : "slide"} ref={slide}></div>
-            </div>
-        </header>
+                </Box>
+                <Box component="div" id="slide" className={isMenuOpen ? "slide active" : "slide"} ref={slide}></Box>
+            </Box>
+        </Box>
      );
 }
  

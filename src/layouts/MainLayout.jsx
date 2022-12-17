@@ -13,7 +13,6 @@ const MainLayout = ({children}) => {
     };
     
     useEffect(() => {
-        // let SY = 0;
         console.log(cursorOuter);
         console.log(cursorInner);
         window.addEventListener('mousemove', (e) => {
@@ -37,14 +36,19 @@ const MainLayout = ({children}) => {
 
     return (
         <Container maxWidth="lg">
-            <Box disableGutters>
+            <Box
+            disablegutters="false"
+            sx={{
+                height: "100px"
+            }}
+            >
                 <Nav />
             </Box>
-            <Box sx={{ p: 3 }} disableGutters>
+            <Box sx={{ p: 3 }} disablegutters="false">
                 {children}
             </Box>
-            <div className="outer-cursor cursor cursor--large" ref={cursorOuter}></div>
-            <div className="inner-cursor cursor cursor--small" ref={cursorInner}></div>
+            <Box component="div" className="outer-cursor cursor cursor--large" ref={cursorOuter}></Box>
+            <Box component="div" className="inner-cursor cursor cursor--small" ref={cursorInner}></Box>
         </Container>
     );
 }
