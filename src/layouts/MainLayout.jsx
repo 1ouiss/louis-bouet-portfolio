@@ -13,8 +13,6 @@ const MainLayout = ({children}) => {
     };
     
     useEffect(() => {
-        console.log(cursorOuter);
-        console.log(cursorInner);
         window.addEventListener('mousemove', (e) => {
             mouse.x = e.pageX;
             mouse.y = e.pageY;
