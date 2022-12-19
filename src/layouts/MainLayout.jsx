@@ -2,6 +2,7 @@ import { Box, Container } from "@mui/material";
 import Nav from "../components/Nav";
 import { useRef, useEffect} from "react";
 import { gsap } from "gsap";
+import Footer from "../components/Footer";
 
 const MainLayout = ({children}) => {
     const cursorOuter = useRef(null);
@@ -45,8 +46,12 @@ const MainLayout = ({children}) => {
             <Box sx={{ p: 3 }} disablegutters="false">
                 {children}
             </Box>
+            <Box>
+                <Footer/>
+            </Box>
             <Box component="div" className="outer-cursor cursor cursor--large" ref={cursorOuter}></Box>
             <Box component="div" className="inner-cursor cursor cursor--small" ref={cursorInner}></Box>
+
         </Container>
     );
 }

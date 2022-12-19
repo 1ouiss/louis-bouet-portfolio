@@ -30,7 +30,7 @@ function App() {
           id: 1,
           title: "Project 1",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.",
-          image: "https://picsum.photos/200/300"
+          image: "./images/memoji.jpeg"
       },
       {
           id: 2,

@@ -23,7 +23,9 @@ const Nav = () => {
     return ( 
         <Box component="header">
             <Box component="div" className="header-inner">
-                <img src="./images/memoji.png" alt="" />
+                <Link to='/'>
+                    <img src="./images/memoji.png" alt="" />
+                </Link>
                 <Box id="menu-toggle" component="div" className="menu-toggle cursor-hover-element" onClick={(e) => handleClick(e)} ref={menuToggle}>
                     <Box component="div" className="menu-toggle-inner magnet">
                         <Box id="line-1" component="div" className={isMenuOpen ? "line top-line active" : "line top-line"} ref={line1}></Box>
@@ -31,10 +33,10 @@ const Nav = () => {
                     </Box>
                 </Box>
                 <Box component="nav" id="nav" ref={nav} className={isMenuOpen ? "active" : null}>
-                    <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                    <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
+                    <Link to="/" onClick={() => setIsMenuOpen(false)}>Acceuil</Link>
+                    <Link to="/about" onClick={() => setIsMenuOpen(false)}>A propos</Link>
                     <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
-                    <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                    <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Me contacter</Link>
                 </Box>
                 <Box component="div" id="slide" className={isMenuOpen ? "slide active" : "slide"} ref={slide}></Box>
             </Box>
