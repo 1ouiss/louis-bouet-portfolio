@@ -60,3 +60,10 @@
     mix-blend-mode: exclusion;
     background-color: #fff;
 }
+
+.image-about{
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}

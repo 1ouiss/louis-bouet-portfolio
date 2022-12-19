@@ -24,6 +24,7 @@ const theme = createTheme({
 
 
 function App() {
+  // eslint-disable-next-line
   const [projects, setProjects] = useState([
       {
           id: 1,
@@ -49,7 +50,7 @@ function App() {
     <BrowserRouter>
       <MainLayout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home projects={projects}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio projects={projects}/>} />
           <Route path="/portfolio/:id" element={<Portfolio projects={projects}/>} />

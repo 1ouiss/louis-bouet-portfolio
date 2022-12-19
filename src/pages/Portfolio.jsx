@@ -1,10 +1,10 @@
-import { Box, Card, CardContent, CardMedia, Grid } from "@mui/material";
-import { useParams, useNavigate } from "react-router-dom";
+import { Box, Grid } from "@mui/material";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import CardProject from "../components/CardProject";
 
 const Portfolio = ({projects}) => {
 
-    const navigate = useNavigate();
     const { id } = useParams()
 
     const [project, setProject] = useState({});
@@ -40,46 +40,11 @@ const Portfolio = ({projects}) => {
                                     margin: "0 auto",
                                     width: "100%",
                                     maxWidth: "1200px",
+                                    
                                 }}
                             >
                                 {projects.map((project, index) => (
-                                    <Card
-                                        key={project.id}
-                                        onClick={() => navigate(`/portfolio/${project.id}`)}
-
-                                        sx={{
-                                            position: "relative",
-                                            width: "100%",
-                                            height: "100%",
-                                            cursor: "pointer",
-                                            maxWidth: 345,
-                                            maxHeight: 345,
-                                            m: 1,
-                                            "&:hover": {
-                                                filter: "brightness(0.5)",
-                                                "& .MuiCardContent-root": {
-                                                    opacity: 1,
-                                                }
-                                            }
-                                        }}
-                                    >
-                                        <CardMedia component="img" image={project.image} alt={project.title} />
-                                        <CardContent sx={{
-                                            position: "absolute",
-                                            top: "50%",
-                                            left: "50%",
-                                            transform: "translate(-50%, -50%)",
-                                            opacity: 0,
-                                            transition: "all 0.3s ease-in-out",
-                                            fontSize: "2rem",
-                                            fontWeight: "bold",
-                                            textAlign: "center",
-                                        }}>
-                                            0{index + 1}
-                                            <br />
-                                            {project.title}
-                                        </CardContent>
-                                    </Card>
+                                    <CardProject project={project} index={index} key={index}/>
                                 ))}
                             </Grid>
                         </Box>

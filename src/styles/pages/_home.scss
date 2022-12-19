@@ -1,3 +1,19 @@
 .intro{
     margin-top: 200px;
+    height: 70vh;
+    &-title{
+        font-size: 5.5rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro{
+        margin-top: 100px;
+        height: 55vh;
+        &-title{
+            font-size: 2rem;
+        }
+    }
+
 }
