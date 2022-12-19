@@ -23,9 +23,7 @@ const Nav = () => {
     return ( 
         <Box component="header">
             <Box component="div" className="header-inner">
-                <h1>
-                    Bouet <span>Louis</span>
-                </h1>
+                <img src="./images/memoji.png" alt="" />
                 <Box id="menu-toggle" component="div" className="menu-toggle cursor-hover-element" onClick={(e) => handleClick(e)} ref={menuToggle}>
                     <Box component="div" className="menu-toggle-inner magnet">
                         <Box id="line-1" component="div" className={isMenuOpen ? "line top-line active" : "line top-line"} ref={line1}></Box>

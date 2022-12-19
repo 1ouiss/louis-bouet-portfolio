@@ -10,6 +10,18 @@ import Portfolio from './pages/Portfolio';
 import MainLayout from './layouts/MainLayout';
 import { useState } from 'react';
 
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ffffff',
+    },
+    secondary: {
+      main: '#ffffff',
+    },
+  },
+});
+
 
 function App() {
   const [projects, setProjects] = useState([
@@ -33,6 +45,7 @@ function App() {
       }
   ])
   return (
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
       <MainLayout>
         <Routes>
@@ -44,6 +57,7 @@ function App() {
         </Routes>
       </MainLayout>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

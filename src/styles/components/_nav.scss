@@ -13,9 +13,11 @@ header{
         align-items: center;
         position: relative;
 
-        h1{
-            color:#fff;
-            mix-blend-mode: exclusion;
+        img{
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            margin-right: 10px;
         }
 
         .menu-toggle{
