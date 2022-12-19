@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Grid } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -29,25 +29,59 @@ const Portfolio = ({projects}) => {
                     </div>
                 ) : (
                     <Box component="div" className="portfolio">
-                        <Box component="div" className="portfolio-inner">
-                            <Box component="div" className="portfolio-title">
+                        <Box component="div">
+                            <Box component="div">
                                 <h2>Portfolio</h2>
                             </Box>
-                            <Box component="div" className="portfolio-content">
-                                {projects.map((project) => (
-                                    <Box component="div" className="portfolio-item" key={project.id} onClick={() => navigate(`/portfolio/${project.id}`)}>
-                                        <Box component="div" className="portfolio-item-inner">
-                                            <Box component="div" className="portfolio-item-image">
-                                                <img src={project.image} alt="" />
-                                            </Box>
-                                            <Box component="div" className="portfolio-item-content">
-                                                <h3>{project.title}</h3>
-                                                <p>{project.description}</p>
-                                            </Box>
-                                        </Box>
-                                    </Box>
+                            <Grid
+                                container
+                                spacing={2}
+                                sx={{
+                                    margin: "0 auto",
+                                    width: "100%",
+                                    maxWidth: "1200px",
+                                }}
+                            >
+                                {projects.map((project, index) => (
+                                    <Card
+                                        key={project.id}
+                                        onClick={() => navigate(`/portfolio/${project.id}`)}
+
+                                        sx={{
+                                            position: "relative",
+                                            width: "100%",
+                                            height: "100%",
+                                            cursor: "pointer",
+                                            maxWidth: 345,
+                                            maxHeight: 345,
+                                            m: 1,
+                                            "&:hover": {
+                                                filter: "brightness(0.5)",
+                                                "& .MuiCardContent-root": {
+                                                    opacity: 1,
+                                                }
+                                            }
+                                        }}
+                                    >
+                                        <CardMedia component="img" image={project.image} alt={project.title} />
+                                        <CardContent sx={{
+                                            position: "absolute",
+                                            top: "50%",
+                                            left: "50%",
+                                            transform: "translate(-50%, -50%)",
+                                            opacity: 0,
+                                            transition: "all 0.3s ease-in-out",
+                                            fontSize: "2rem",
+                                            fontWeight: "bold",
+                                            textAlign: "center",
+                                        }}>
+                                            0{index + 1}
+                                            <br />
+                                            {project.title}
+                                        </CardContent>
+                                    </Card>
                                 ))}
-                            </Box>
+                            </Grid>
                         </Box>
                     </Box>
                 )
