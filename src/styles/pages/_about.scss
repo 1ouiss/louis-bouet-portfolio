@@ -84,3 +84,18 @@
         color: #161616;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .box-skills{
+        .box{
+
+            &:hover{
+                width: 60px;
+            }
+            &:hover span{
+                visibility: hidden;
+                transition: transform .5s ease-out;
+            }
+        }
+    }
+}

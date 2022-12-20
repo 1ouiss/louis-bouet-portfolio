@@ -35,6 +35,18 @@ const ProjectDetail = ({project, id}) => {
                     >
                         {project.title}
                     </Typography>
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            margin: "20px 0"
+                        }}
+                    >
+                        Technologies utilisées : &nbsp;
+                        {
+                            project.stack
+                        }
+                    </Typography>
+
                     <Typography variant="body2">
                         {
                             project.description
