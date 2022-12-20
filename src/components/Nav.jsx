@@ -49,7 +49,7 @@ const Nav = () => {
                     </Box>
                 </Box>
                 <Box component="nav" id="nav" ref={nav} className={isMenuOpen ? "active" : null}>
-                    <Link to="/" onClick={() => setIsMenuOpen(false)}>Acceuil</Link>
+                    <Link to="/" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
                     <Link to="/about" onClick={() => setIsMenuOpen(false)}>A propos</Link>
                     <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
                     <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Me contacter</Link>
