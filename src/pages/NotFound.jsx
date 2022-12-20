@@ -17,7 +17,7 @@ const NotFound = () => {
                 ❌ Page non trouvée ❌
             </Typography>
             <Link to='/'>
-                Retour à l'acceuil
+                Retour à l'accueil
             </Link>
         </Box>
     );
