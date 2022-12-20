@@ -141,6 +141,7 @@ const Contact = () => {
                     label="Message"
                     variant="outlined"
                     color="secondary"
+                    name="message"
                     multiline
                     rows={5}
                     sx={{
