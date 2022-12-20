@@ -1,10 +1,11 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 const Nav = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [cursor, setCursor] = useState(null)
 
     const menuToggle = useRef(null);
     const nav = useRef(null);
@@ -20,8 +21,23 @@ const Nav = () => {
         }
     }
 
+    useEffect(()=>{
+        setCursor(document.querySelector(".cursor"))
+
+    }, [])
+
+    const changeCursor = () => {
+        if (cursor.classList.contains('exclude-cursor') ) {
+            cursor.classList.remove("exclude-cursor");
+        }else{
+            cursor.classList.add("exclude-cursor");
+        }
+    }
+
     return ( 
-        <Box component="header">
+        <Box component="header"
+        onMouseEnter={(e)=> changeCursor()}
+        onMouseLeave={(e) => changeCursor()}>
             <Box component="div" className="header-inner">
                 <Link to='/'>
                     <img src="./images/memoji.png" alt="" />

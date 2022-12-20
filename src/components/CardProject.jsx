@@ -24,7 +24,9 @@ const CardProject = ({project, index}) => {
                     }
                 }}
             >
-                <CardMedia component="img" image={project.image} alt={project.title} />
+                <CardMedia component="img" image={project.image} alt={project.title} sx={{
+                    height:345
+                }}/>
                 <CardContent sx={{
                     position: "absolute",
                     top: "50%",

@@ -1,7 +1,8 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CardProject from "../components/CardProject";
+import ProjectDetail from "../components/ProjectDetail";
 
 const Portfolio = ({projects}) => {
 
@@ -23,15 +24,14 @@ const Portfolio = ({projects}) => {
 
             {
                 id ? (
-                    <div>
-                        <h1>Hello project {id}</h1>
-                        <h2>{project.title}</h2>
-                    </div>
+                    <ProjectDetail project={project} id={id}/>
                 ) : (
-                    <Box component="div" className="portfolio">
+                    <Box component="div" className="portfolio" sx={{marginTop: "60px"}}>
                         <Box component="div">
                             <Box component="div">
-                                <h2>Portfolio</h2>
+                                <Typography variant="h3">
+                                    Portfolio
+                                </Typography>
                             </Box>
                             <Grid
                                 container
@@ -40,7 +40,7 @@ const Portfolio = ({projects}) => {
                                     margin: "0 auto",
                                     width: "100%",
                                     maxWidth: "1200px",
-                                    
+                                    marginTop: "40px"
                                 }}
                             >
                                 {projects.map((project, index) => (

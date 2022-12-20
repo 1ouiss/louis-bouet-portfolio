@@ -66,12 +66,12 @@ const About = () => {
         },
     ])
 
-    const [date, setDate] = useState('test')
+    const [date, setDate] = useState('2019')
 
     return ( 
         <Box
             sx={{
-                marginTop: "100px",
+                marginTop: "60px",
                 "@media (max-width: 768px)": {
                     marginTop: "50px",
                 }
@@ -147,13 +147,23 @@ const About = () => {
                         marginTop: "30px"
                     }}
                 >
-                    <Box onClick={()=> setDate("test")}>
+                    <Box
+                        onClick={()=> setDate("2019")}
+                        className={date==="2019" ? "active-btn" : "outline-btn"}
+                    >
                         2019
                     </Box>
-                    <Box onClick={()=> setDate("test2")}>
+                    <Box
+                        onClick={()=> setDate("2021")}
+                        className={date==="2021" ? "active-btn" : "outline-btn"}
+                    >
                         2021
                     </Box>
-                    <Box onClick={()=> setDate("test3")}>
+                    <Box
+                        onClick={()=> setDate("NOW")}
+                        className={date==="NOW" ? "active-btn" : "outline-btn"}
+
+                    >
                         EN COURS
                     </Box>
                 </Box>
@@ -168,7 +178,7 @@ const About = () => {
                     }}
                 >
                     {
-                        date && date==="test" ?
+                        date && date==="2019" ?
                         <Box>
                             <Typography variant="h5">BIA - Brevet d'Initiation Aéronautique</Typography>
                             <Typography variant="body1">Lycée Georges Cabanis - Brive-La-Gaillarde (19100)</Typography>
@@ -176,7 +186,7 @@ const About = () => {
                         : null
                     }
                     {
-                        date && date==="test2" ?
+                        date && date==="2021" ?
                         <Box>
                             <Typography variant="h5">Baccalauréat Général - Admis Mention assez bien</Typography>
                             <Typography variant="body2">(Option Sciences de L'Ingénieur et Numérique et Sciences de l'Informatique)</Typography>
@@ -185,7 +195,7 @@ const About = () => {
                         : null
                     }
                     {
-                        date && date==="test3" ?
+                        date && date==="NOW" ?
                         <Box>
                             <Typography variant="h5">Bachelor développeur web</Typography>
                             <Typography variant="body1">Ecole Supérieur du Digital - Bordeaux (33000)</Typography>
