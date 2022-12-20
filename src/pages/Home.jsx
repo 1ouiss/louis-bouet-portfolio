@@ -61,21 +61,18 @@ const Home = ({projects}) => {
                     <Box
                         component="div"
                         className="about-img"
-                        sx={{
-                            maxWidth: "400px",
-                            maxHeight: "400px",
-
-                            margin: "0 auto",
-                            "@media (max-width: 768px)": {
-                                margin: "2rem",
-                            },
-                        }}
                     >
                         <img src="./images/photo_about.jpeg" alt="about" className="image-about"/>
                     </Box>
                 </Box>  
             </Box>
-            <Box component="div" className="skills">
+            <Box
+                component="div"
+                className="skills"
+                sx={{
+                    marginTop: "120px"
+                }}
+            >
             <Typography variant="h3" className="about-title">
                     Mes projets
                 </Typography>

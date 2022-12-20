@@ -66,7 +66,7 @@ const About = () => {
         },
     ])
 
-    const [date, setDate] = useState('2019')
+    const [date, setDate] = useState('NOW')
 
     return ( 
         <Box

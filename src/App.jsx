@@ -48,7 +48,7 @@ function App() {
           link: "https://haltogame.com"
       },
       {
-          id: 3,
+          id: 4,
           title: "Landing Page - Halto Game",
           description: "Lors du Digital Event (projet réunissant l'ESD et l'ESP pendant 2 semaines) j'étais dans le WorkShop WebApp. J'ai pu créer la Landing page permettant de présenter Halto Game",
           image: "../images/halto-landing.png",

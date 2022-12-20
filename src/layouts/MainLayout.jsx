@@ -29,6 +29,7 @@ const MainLayout = ({children}) => {
                 y: mouse.y,
             });
         })
+        //eslint-disable-next-line
     }, [])
 
 
